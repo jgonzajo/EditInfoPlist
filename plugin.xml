@@ -67,6 +67,10 @@
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string>Permite que la aplicación conozca tu ubicación.</string>
         </config-file>
+
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+            <string>jijijijjijij</string>
+        </config-file>
         
     </platform>
     
