@@ -30,8 +30,22 @@
         <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="overwrite">
             <application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="co.acoustic.mobile.push.sdk.js.MceJsonApplication" android:supportsRtl="true" />
         </edit-config>
-	    //pluginred
-	    <config-file target="AndroidManifest.xml" parent="/manifest/application"> <service android:name="cordova.plugin.netperformance.ServiceNet" /> </config-file>
+	//pluginred
+	<config-file target="AndroidManifest.xml" parent="/manifest/application"> 
+		<service android:name="cordova.plugin.netperformance.ServiceNet" /> 
+	</config-file>
+	
+	//pluginfacebook
+	<config-file parent="/*" target="res/values/strings.xml">
+		<string name="facebook_app_id">1064497160291882</string>
+		<string name="fb_login_protocol_scheme">fb1064497160291882</string>
+		<string name="facebook_client_token">31efb67c6cf0bfe5bee67bddd6c975f5</string>
+	</config-file>
+
+	<config-file target="AndroidManifest.xml" parent="/manifest/application"> 		
+		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+		<meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+	</config-file>
     </platform>
 
     
